@@ -1,45 +1,140 @@
 body {
-width: 100%;
-height: auto;
-margin: 0;
-padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: flex-start;
+    position: absolute;
+    height: auto;
+    margin: 0;
+    padding: 0;
 }
 
-/*nav{
-position: absolute;
-left:0;
-top:0;
-font-family: Arial, Helvetica, sans-serif;
+aside{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    order: -1;
+    align-self: auto;
+    padding-top: 3em;
+    width: 18em;
+    height: 100%;
+    position: fixed;
+    z-index: 1001;
+    background-color:#f2f3f7 ;
+}
+
+.menuknop{
+    font-size: 3em;
+    display: none;
+    z-index: 100;
+    margin: .2em 0 0 .2em;
+}
+
+.fa-bars{
+    color: rgb(51, 51, 51)
+}
+@media only screen and (max-width: 768px) {
+    aside{
+        flex-direction: row;
+        display: none;
+    }
+
+    .menuknop{
+        align-self: flex-start;
+        display: initial;
+        position: absolute;
+        cursor: pointer;
+    }
+}
+
+aside > img{
+    width: 15em;
+    height: 15em;
+    border-radius: 20em;
+    margin: 0 0 0 1.5em;
+}
+
+aside > p{
+    font-family: Quicksand ,Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.5em;
+    margin: 2em 0 1em 1.5em;
+}
+
+nav{
+    left:0;
+    top:0;
 }
 
 ul {
-text-align: left;
+    text-align: left;
+    list-style: none;
 }
-*/
+
+li {
+    padding-right: 1em;
+
+}
 
 h1,h2,h3{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Quicksand ,Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1{
+    font-size: 1.5em;
+    font-weight: lighter;
+    color: rgb(112, 112, 112);
+    line-height: 0.5em;
+}
+
+
+h2{
+    font-size: 1.7em;
+    color: rgb(0, 0, 0);
+    line-height: 0.5em;
+    font-weight: normal;
+    margin: 0 0 2em 0;
+    
+
+}
+
+h3{
+    line-height: 2em;
+    margin-top: 5em;
+
 }
 p{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Playfair, Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    color: rgba(0,0,0,1.0);
+    width: 80%;
+    font-weight: 100;
 }
 
 a{
+    font-family: Playfair, Arial, Helvetica, sans-serif;
     text-decoration: none;
     text-align: center;
-
-
+    color: rgba(0,0,0,1.0);
+    width: 80%;
+    font-weight: 100;
 }
  
 main{
-position: relative;
-width: 80%;
-height: auto;
-margin: 0 0 0 10%;
-
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    order: 1;
+    width: 80%;
+    margin: 0 0 0 2em;
 }
-div#frontpageimg{
-    position: relative;
+
+
+#home{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    order: 0;
     left: 0em;
     top: -1em;
     background: url(images/img_bg_1.jpg) no-repeat center center ;
@@ -49,117 +144,134 @@ div#frontpageimg{
     z-index: 10;
 }
 
-p#tekstinfrontpage{
+
+#home > p{
     position: absolute;
-    padding: 1em;
+    font-family: Playfair, Arial, Helvetica, sans-serif;
     font-size: 1.5em;
-    left: 2em;
-    top: 1em;
-    color: rgba(0,0,0,1.0);
-    background-color: rgba(225, 225, 225, 0.5);
-
-}
-
-div#overmij{
-    width: 90%;
-    height: auto;
-    margin: 8em 0 0 13%;
-}
-
-h1#mij{
-    font-size: 1.5em;
-    font-weight: lighter;
-    color: rgb(112, 112, 112);
-    line-height: 0.5em;
-}
-
-h2#wiebenik{
-    font-size: 1.7em;
-    color: rgb(0, 0, 0);
-    line-height: 0.5em;
-    font-weight: normal;
-
-}
-
-h3#hiikben{
-    line-height: 2em;
-    margin-top: 5em;
-
-}
-
-p#ikbentekst{
-    font-size: 1em;
-    color: rgba(0,0,0,1.0);
-    width: 80%;
-    max-width: 30em;
-    font-weight: 100;
-}
-
-div#werk{
-    position: relative;
-    width: 90%;
-    max-width: 50em;
-    height: 112em;
-    margin: 0 0 0 5%;
-
-}
-
-a#fpknop{
-    position: absolute;
-    top: 2em;
-    width: 80%;
-    height: 20em;
-    background-color: lightseagreen;
-    margin-left: 10%;
-
-}
-
-a#rpknop{
-    position: absolute;
-    top: 24em;
-    width: 80%;
-    height: 20em;
-    background-color: lightseagreen;
-    margin-left: 10%;
-
-}
-
-a#sbknop{
-    position: absolute;
-    width: 80%;
-    top: 46em;
-    height: 20em;
-    background-color: lightseagreen;
-    margin-left: 10%;
-
-}
-
-a#bpknop{
-    position: absolute;
-    width: 80%;
-    top: 68em;
-    height: 20em;
-    background-color: lightseagreen;
-    margin-left: 10%;
-
-}
-
-a#pkknop{
-    position: absolute;
-    width: 80%;
-    top: 90em;
-    height: 20em;
-    background-color: lightseagreen;
-    margin-left: 10%;
-    
-}
-
-p.knoppen{
-    color: rosybrown;
-    margin-top: 0;
-    padding: 1em;
-    font-size: 1.5em;
-    background-color: rgba(225, 225, 225, 0.5);
-    color: rgba(0,0,0,1.0);
+    background-color: rgba(51, 51, 51, 0.404);
+    width: 10em;
+    height: 2.5em;
+    top: 8em;
+    left: 3em;
+    padding:.5em;
+    justify-content:center;
+    align-items:center;
     text-align: center;
+}
+
+#over{
+    position: relative;
+    width: 20em;
+    max-width: 50em;
+    height: 50em;
+    margin: 10em 0 0 0;
+    /*background-color: pink;*/
+}
+
+#werk{
+    position: relative;
+    width: 20em;
+    height: 155em;
+    margin: 0 0 10em 0;
+}
+
+#werk > a{
+    position: absolute;
+    text-align: left;
+    top: 2em;
+    width: 18em;
+    height: 18em;
+    background-color: lightseagreen;
+    padding:1em 0 0 2em;
+    margin-top: 2em;
+}
+
+#werk > h2{
+    margin-bottom: 2em;
+}
+
+#werk > p{
+    position: absolute;
+    color: grey;
+}
+
+
+#werk > a:nth-of-type(2){
+    margin-top: 24em;
+}
+
+#werk > a:nth-of-type(3){
+    margin-top: 46em;
+}
+
+#werk > a:nth-of-type(4){
+    margin-top: 68em;
+}
+
+#werk > a:nth-of-type(5){
+    margin-top: 90em;
+}
+
+#werk > a:nth-of-type(6){
+    margin-top: 112em;
+}
+
+#werk > a:nth-of-type(7){
+    margin-top: 134em;
+}
+
+
+
+#vaardigheden{
+    top: 100em;
+    padding:.2em 0 0 0;
+    height: auto;
+    width: 19.5em;
+    margin: 0 0 10em 0;
+}
+#vaardigheden>p{
+    margin-bottom: 0.2em;
+
+}
+
+progress {
+    margin: 0;
+    border-radius: 2em;
+    background: rgba(65, 65, 65, 0.212);
+    height: 1.5em;
+    width: 18em;
+    overflow: visible;
+  }
+
+  progress::-webkit-progress-bar {
+    border-radius: 2em;
+    background: rgba(248, 94, 94, 0.801);
+    overflow: visible;
+  }
+
+  progress::-webkit-progress-value {
+    /* style rules */
+  }
+
+  progress::-moz-progress-bar {
+    border-radius: 2em;
+    background: rgba(248, 94, 94, 0.801);
+    overflow: visible;
+  }
+
+  #contact{
+    top: 100em;
+    padding:.2em 0 0 0;
+    height: auto;
+    width: 19.5em;
+    margin: 0 0 10em 0;
+}
+
+footer{
+    background-color: rgba(0, 0, 0, 0.062);
+    height: 10em;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
 }
